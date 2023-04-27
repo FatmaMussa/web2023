@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>API</title>
+        <script>
+            // let person = {
+            //     first:'Haitham',
+            //     last:'Rashid'
+            // };
+            // console.log(person);
+            document.addEventListener('DOMContentLoaded',function()
+            {
+                 //fetch url
+                fetch('https://restcountries.com/v3.1/all')
+                //put url in json form
+                .then(response=>response.json())
+                //
+                .then(data=>{
+                    console.log(data);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

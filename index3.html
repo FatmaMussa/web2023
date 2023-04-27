@@ -1,3 +1,74 @@
 <html>
+    <head>
+        <title>DOM-Add Event Listener</title>
+        <!-- <script src="script.js"></script> -->
+        <script>
+            // document.addEventListener('DOMContentLoaded',function(){
+            //     document.querySelector('form').onsubmit=function()
+            //     {
+            //         alert(document.querySelector('#name').value);
+            //     }
+            // });
+            // document.addEventListener('DOMContentLoaded',function()
+            // {
+            //     console.log("Test");
+
+            //     document.querySelectorAll('button').forEach(function(button){
+            //         button.onclick=function()
+            //         {
+            //             document.querySelector("#hello").style.color=button.dataset.color;
+            //         }
+            //     });
+            // });
+            // document.addEventListener('DOMContentLoaded',function(){
+            //     document.querySelector('select').onchange=function(){
+            //         document.querySelector('#hello').style.color=this.value;
+            //     }
+            // });
+            
+            // document.addEventListener('DOMContentLoaded',()=>{
+            //     document.querySelector('select').onchange=()=>{
+            //         document.querySelector('#hello').style.color=this.value;
+            //         console.log("Test");
+            //     }
+            // });
+            if(!localStorage.getItem('counter'))
+            {
+                localStorage.setItem('counter',0);
+            }
     
+            function count()
+            {
+                let counter = localStorage.getItem('counter');
+                counter++;
+                document.querySelector('h1').innerHTML=counter;
+                localStorage.setItem('counter',counter);
+            }
+            document.addEventListener('DOMContentLoaded',function(){
+                document.querySelector('h1').innerHTML=localStorage.getItem('counter');
+                document.querySelector('button').onclick=count;
+            })
+        </script>
+    </head>
+    <body>
+        <h1 id="id"></h1>
+        <button>Count</button>
+        <!-- <h1>0</h1>
+        <button>Count</button> -->
+        <!-- <form>
+            <input type="text" id="name" placeholder="Name" autofocus>
+            <input type="submit" value="Submit">
+        </form> -->
+        <!-- <h1 id="hello">Hello</h1>
+        <button data-color="red">Red</button>
+        <button data-color="blue">Blue</button>
+        <button data-color="green">Green</button> -->
+        <!-- <h1 id="hello">Hello</h1>
+        <select>
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select> -->
+    </body>
 </html>
