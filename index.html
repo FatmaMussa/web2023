@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Wanafunz wanaofeli Web</title>
+        <script>
+            var myArray = ['cars',2,true];
+            console.log(myArray.length);
+            myArray[3]="Biubwa";
+            console.log(myArray[3]);
+            myArray.push("Haitham");
+            console.log(myArray);
+            myArray.unshift("Munira");
+            console.log(myArray);
+            myArray.pop();
+            console.log(myArray);
+            myArray.shift();
+            console.log(myArray);
+
+            var person = 
+            {
+                name:"Munawwar",
+                age:22,
+                isMale:false,
+                personality: ['patient','loyal','happy'],
+                company: {name:'SUZA',id:3045}
+            }
+            console.log(person.age);
+            console.log(person['name']);
+            console.log(person['company'].id)
+
+            function factorial(n)
+            {
+                var product =1;
+                for(var i = 1;i<=n;i++)
+                {
+                    product *= i;
+                }
+                return product;
+            }
+            var f = factorial(5);
+            console.log(f);
+
+            var nums = [4,8,12,2];
+            function print(n)
+            {
+                console.log(n);
+            }
+            nums.forEach(print);
+
+            nums.forEach(element=>console.log(element));
+
+            //function prototype
+            function Person(name,age)
+            {
+                this.name=name;
+                this.age=age;
+                this.greeting = function(){
+                    return 'Hello! My name is '+this.name;
+                }
+            }
+            var rahma = new Person('Rahma',22);
+            console.log(rahma.greeting());
+
+            function Student(name, age,school)
+            {
+                this.__proto__ = new Person(name,age);
+                this.school=school;
+            }
+            var raya = new Student("Raya",22,'SoB');
+            console.log(raya.greeting());
+
+
+
+            function hello()
+            {
+                let name = 'Shafaa';
+                alert("Hello");
+                console.log("this is for messaging");
+                console.log(Number.MAX_VALUE);
+                console.log(Number.MIN_VALUE);
+                console.log(Number(name));
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="hello()">Hello</button>
+    </body>
+</html>

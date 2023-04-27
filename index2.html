@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Wanafunz wanaofeli Web</title>
+        <script>
+            //let element = document.getElementById("id");
+            //let element = document.querySelector('h1');
+            /*function hello()
+            {
+                const header = document.querySelector('h1');
+                if(header.innerHTML==='Hello')
+                    header.innerHTML="Good bye!";
+                else 
+                    header.innerHTML="Hello";
+            }*/
+            let counter = 0;
+            function count()
+            {
+                counter++;
+                document.querySelector('h1').innerHTML=counter;
+                if(counter % 10 ==0)
+                    alert(`Count now is ${counter}`);
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>0</h1>
+        <button onclick="count();">Count</button>
+        <!-- <h1 id="id">Hello</h1>-->
+        <!-- <button onclick="hello();">Hello</button>-->
+    </body>
+</html>
